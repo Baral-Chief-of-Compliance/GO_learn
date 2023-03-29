@@ -1,13 +1,16 @@
 package main
 
 import (
+	"fmt"
 	"les_2/shape"
+	"time"
 )
 
 func main() {
 	square := shape.NewSquare(5)
 	circle := shape.NewCircle(8)
 
+	fmt.Println(time.Now())
 	// scheduler := scheduler.NewScheduler()
 
 	shape.PrintShapeArea(square)
