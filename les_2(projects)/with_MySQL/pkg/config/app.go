@@ -10,5 +10,14 @@ var (
 )
 
 func Connetc() {
-	d, err := gorm.Open("mysql")
+	d, err := gorm.Open("mysql", "root:1234@/simplerest?charset=utf8&parseTime=True&loc=Local")
+	if err != nil {
+		panic(err)
+	}
+
+	db = d
+}
+
+func GetDB() *gorm.DB {
+	return db
 }
